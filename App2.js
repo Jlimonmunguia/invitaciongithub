@@ -1,0 +1,1 @@
+document.getElementById("skip-button2")?.addEventListener('click', () => window.location.href = './main.html');

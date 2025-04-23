@@ -1,0 +1,81 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video-bg {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content {
+    position: relative; /* Para que el botón esté encima del video */
+    z-index: 1; /* Asegura que el contenido esté sobre el video */
+    text-align: center;
+    transform: translateY(140%);
+}
+
+.centered-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(17, 72, 145, 0.5);
+    border: 2px solid white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.centered-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.countdown {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px;
+    border-radius: 10px;
+    z-index: 100;
+    border: 1px solid rgba(0, 200, 255, 0.5);
+    box-shadow: 
+        0 0 10px rgba(0, 150, 255, 0.8),
+        0 0 20px rgba(0, 100, 255, 0.4);
+    animation: neon-pulse 1.5s infinite alternate;
+    width: 100%; /* Ancho máximo para que se ajuste en móviles */
+    max-width: 250px; /* Limitar el ancho máximo */
+}
+
+.countdown-item {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.countdown-number {
+    font-size: .8rem; /* Ajusta el tamaño de los números */
+    font-weight: bold;
+}
+
+.countdown-label {
+    font-size: .8rem; /* Tamaño más pequeño para las etiquetas */
+}
+
+
